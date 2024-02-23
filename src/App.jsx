@@ -2,6 +2,7 @@ import "./App.css";
 import ProductCardContainer from "./components/ProductCardContainer";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import ProductCard from "./components/ProductCard";
 
 const user = {
   firstName: "Olivia",
@@ -96,7 +97,7 @@ function App() {
   return (
     <main className="store">
       <NavBar user={user}/>
-      <ProductCardContainer />
+      <ProductCardContainer products={products} />
       <Footer />
     </main>
   );
