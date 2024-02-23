@@ -3,6 +3,7 @@ import ProductCardContainer from "./components/ProductCardContainer";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ProductCard from "./components/ProductCard";
+import StyleWrapper from "./components/StyleWrapper";
 
 const user = {
   firstName: "Olivia",
@@ -98,7 +99,10 @@ function App() {
     <main className="store">
       <NavBar user={user}/>
       <ProductCardContainer products={products} />
-      <Footer />
+      <StyleWrapper>
+        <Footer />
+      </StyleWrapper>
+      
     </main>
   );
 }
