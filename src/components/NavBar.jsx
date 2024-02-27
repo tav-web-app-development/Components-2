@@ -16,4 +16,5 @@ export default function NavBar({user}) {
       <a href="#about">About </a>       
     </>
   );  
+
 };
