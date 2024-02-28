@@ -1,36 +1,10 @@
-# Components Assignment 2
+# Props Assignment 2
 
 We will continue working on the E-commerce store. You will need to do:
 
-1. Create and checkout to a branch called `develop`
-2. Pass the `user` object as a prop to the `NavBar` component
-
-   1. The `NavBar` component should say "Welcome `User.Name`" only if the `user` prop was passed down. Otherwise, it should say "login".
-   2. The `NavBar` should say "`user.ItemsInCart` in your cart" If the user has more than 0 items in his shopping cart. Else it should not say anything
-
-3. The `ProductCard` should receive as a prop the `products` variable
-
-   1. It should accept the following props: `name`, `description`, `price`, `imageUrl`, and `isInStock`
-   2. It should display the product title, description, image URL, and price that were passed to it as props
-   3. It should use the logical AND operator (&&) to say "Unavailable" only when `isInStock` is set to false
-   4. Add some style to it using the `style` prop. One idea would be to add a border around the card
-
-4. The `ProductCardContainer` should accept a list of products as a prop
-
-   1. It should generate a list of `ProductCard` components using the JS `map` method
-
-5. Create a component called `StyleWrapper` that wraps children passed into it with a div
-
-   1. The div should set the following CSS styles using the style prop:
-
-   ```css
-   background-color: #f8f9fa; /* Light gray background */
-   padding: 20px; /* Padding around the content */
-   text-align: center; /* Center-align the text */
-   border-top: 1px solid #dee2e6; /* Optional border at the top */
-   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-   ```
-
-   2. In the `App` component, use `StyleWrapper` by passing the `Footer` component as a child to the `StyleWrapper` component
-
-6. Push your code to GitHub open a Pull Request comparing `develop` to `master`, and submit a link to the PR in Omnivox
+1. Create and checkout to a branch called `props`
+2. In the `ProductCard` component, log to the console the price of the item `onMouseOver`
+3. In the `ProductCardContainer` component, create an event handler that will fire a browser alert that says `You added {product name}`
+   1. The `ProductCard` component should accept as a prop the event handler defined in `ProductCardContainer`
+   2. Fire the passed event when the `add to cart`button is clicked
+4. Push your code to GitHub open a Pull Request comparing `develop` to `master`, and submit a link to the PR in Omnivox
