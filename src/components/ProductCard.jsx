@@ -1,20 +1,21 @@
-export default function ProductCard() {
+import React from 'react';
+
+export default function ProductCard(props) {
+  const handleMouseOver = () => {
+    console.log('Price:', props.price);
+  };
   return (
     <>
-      <img src="https://placehold.co/400x200.jpg?text=Product" alt="hp 15" />
-      <h3>
-        HP 15 Laptop w/ 1 year of Microsoft 365 - Natural Silver (Intel
-        N100/128GB SSD/4GB RAM)
-      </h3>
-      <p>
-        1.0GHz Intel N100 quad-core CPU and 4GB DDR4 RAM can power productivity
-        tasks as well as leisurely tasks including creating presentations,
-        watching videos, and casual photo editing 128GB UFS storage provides a
-        safe and reliable storage for your important documents and files
-      </p>
-      <div className="price">$487.79</div>
-
-      <button>Add to Cart</button>
+      <img src={props.imageUrl} alt={props.name} style={{ border: '3px solid blue' }} />
+      <h3>{props.name}</h3>
+      <p>{props.description}</p>
+      <div className="price" onMouseOver={handleMouseOver}>${props.price}</div>
+      <button onClick={() => props.onAddToCart(props.name)}>Add to Cart</button>
+      {props.isInStock && <p style={{ color: 'green', fontWeight: 'bold' }}>Available</p>}
+      {!props.isInStock && <p style={{ color: 'red', fontWeight: 'bold' }}>Unavailable</p>}
+      
+      
     </>
   );
 }
+

@@ -2,6 +2,8 @@ import "./App.css";
 import ProductCardContainer from "./components/ProductCardContainer";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import ProductCard from "./components/ProductCard";
+import StyleWrapper from "./components/StyleWrapper";
 
 const user = {
   firstName: "Olivia",
@@ -95,9 +97,12 @@ function App() {
 
   return (
     <main className="store">
-      <NavBar />
-      <ProductCardContainer />
-      <Footer />
+      <NavBar user={user}/>
+      <ProductCardContainer products={products} />
+      <StyleWrapper>
+        <Footer />
+      </StyleWrapper>
+      
     </main>
   );
 }
