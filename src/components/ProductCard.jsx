@@ -10,9 +10,11 @@ export default function ProductCard(props) {
       <h3>{props.name}</h3>
       <p>{props.description}</p>
       <div className="price" onMouseOver={handleMouseOver}>${props.price}</div>
+      <button onClick={() => props.onAddToCart(props.name)}>Add to Cart</button>
       {props.isInStock && <p style={{ color: 'green', fontWeight: 'bold' }}>Available</p>}
       {!props.isInStock && <p style={{ color: 'red', fontWeight: 'bold' }}>Unavailable</p>}
-      <button>Add to Cart</button>
+      
+      
     </>
   );
 }
