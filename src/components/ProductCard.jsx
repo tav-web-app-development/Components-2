@@ -7,7 +7,7 @@ export default function ProductCard(props) {
       <div className="price">${props.price}</div>
       {props.isInStock && <p>Available</p>}
       {!props.isInStock && <p>Unavailable</p>}
-      <button>Add to Cart</button>
+      <button onClick={() => props.onAddToCart(props.name)}>Add to Cart</button>
     </div>
   );
 }
